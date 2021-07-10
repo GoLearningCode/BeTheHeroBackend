@@ -1,15 +1,18 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/GoLearningCode/BeTheHeroBackend/controllers/incidents"
+	"github.com/gofiber/fiber/v2"
+)
 
 func Route(app *fiber.App) {
-	/*app.Post("/sessions", controllers.session.create)
-	app.Get("/ongs", controllers.ong.index)
-	app.Post("/ongs" controllers.ong.create)
-	app.Get("/profile", controllers.profile.create)
+	/*app.Post("/sessions", session.Create)
+	app.Get("/ongs", ong.Index)
+	app.Post("/ongs" ong.Create)
+	app.Get("/profile", profile.Create)
 	*/
-	app.Get("/incidents", controllers.incidents.index)
-	//app.Post("/incidents", controllers.incidents.create)
-	//app.Delete("/incidents/:id", controllers.incidents.delete)
+	app.Get("/incidents", incidents.Index)
+	//app.Post("/incidents", incidents.Create)
+	//app.Delete("/incidents/:id", incidents.Delete)
 
 }
