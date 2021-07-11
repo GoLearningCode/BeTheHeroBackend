@@ -8,7 +8,7 @@ import (
 
 func Route(app *fiber.App) {
 	//app.Post("/sessions", session.Create)
-	//app.Get("/ongs", ong.Index)
+	app.Get("/ongs", ong.Index)
 	app.Post("/ongs", ong.Create)
 	app.Get("/profile", profile.Index)
 	//app.Get("/incidents", incidents.Index)

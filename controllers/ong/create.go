@@ -13,7 +13,7 @@ func Create(c *fiber.Ctx) error {
 	db := database.ConnectToDb()
 	db.Table("ong")
 
-	db.Create(ong)
+	db.Create(&ong)
 
 	return c.JSON(map[string]models.Ong{"ong": ong})
 }
