@@ -14,6 +14,6 @@ func Route(app *fiber.App) {
 	app.Get("/profile", profile.Index)
 	app.Get("/incidents", incidents.Index)
 	app.Post("/incidents", incidents.Create)
-	//app.Delete("/incidents/:id", incidents.Delete)
+	app.Delete("/incidents/:id", incidents.Delete)
 
 }
