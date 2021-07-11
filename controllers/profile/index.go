@@ -10,7 +10,7 @@ func Index(c *fiber.Ctx) error {
 	db := database.ConnectToDb()
 	db.Table("incidents")
 
-	incident := models.Incident{}
+	incident := []models.Incident{}
 	db.Where("ong_id = ?", 1).Find(&incident)
-	return c.JSON(map[string]string{"incidents": "incident"})
+	return c.JSON(map[string][]models.Incident{"incidents": incident})
 }
